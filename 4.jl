@@ -1,4 +1,5 @@
 using DelimitedFiles
+function run()
 input_file_dir = "/home/georgeos/Documents/GitHub/advent_of_code_2020_julia/advent_of_code_2020_julia/4_input.txt";
 input = readdlm(input_file_dir, '\n', skipblanks=false)
 
@@ -32,7 +33,6 @@ for passport in passports
         end
     end
 end
-println(a)
 c = 0
 valid_chars = vcat(collect('0':'9'), collect('a':'f'))
 for passport in valid_passports_1
@@ -59,4 +59,4 @@ for passport in valid_passports_1
         c+=1
     end
 end
-println(c)
+end
